@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+<title>Program 13b</title>
+<style type="text/css">
+.layer1style
+{
+border:solid thick black;
+padding:1em;
+width:300px;
+background-color:green;
+position:absolute;
+top:100px;
+left:0px;
+z-index:0;
+}
+.layer2style
+{
+border:solid thick red;
+padding:1em;
+width:300px;
+background-color:blue;
+position:absolute;
+top:120px;
+left:90px;
+z-index:0;
+}
+.layer3style
+{
+border:solid thick green;
+
+padding:1em;
+width:300px;
+background-color:purple;
+position:absolute;
+top:140px;
+left:180px;
+z-index:0;
+}
+</style>
+<script type="text/javascript">
+var topLayer="layer3";
+var origPos;
+function mover(toTop,pos)
+{
+var newTop=document.getElementById(toTop).style;
+newTop.zIndex="10";
+topLayer=document.getElementById(toTop).id;
+origPos=pos;
+}
+function moveBack()
+{
+var oldTop=document.getElementById(topLayer).style;
+oldTop.zIndex=origPos;
+}
+</script>
+</head>
+<body>
+<h3>Name:Kirthana Kamath P</h3>
+<h3>USN :4MT21IS020</h3>
+<h2 style="text-align:center;color:red"> The stacking of Paragraphs </h2>
+<div style="z-index:1;" class="layer1style" id="layer1"
+onmouseover="mover('layer1','1')" onmouseout="moveBack()">
+
+<h3>The Tortoise and the Hare</h3>
+
+This is an extremely popular story about a hare and a tortoise.
+The hare is an animal that is known to move quickly, while a tortoise is one to move slowly.
+One day, the hare challenged the tortoise to a race simply to prove that he was the best. The tortoise agreed.
+Once the race began the hare was easily able to get a head start. Upon realizing that the tortoise is far behind. The overconfident hare decided to take a nap.
+Meanwhile the tortoise, who was extremely determined and dedicated to the race was slowly nearing the finish line.
+The tortoise won the race while the hare napped. Most importantly he did it with humility and without arrogance.
+
+</div>
+<div style="z-index:2;" class="layer2style" id="layer2"
+onmouseover="mover('layer2','2')" onmouseout="moveBack()">
+
+<h3>The Boy who cried wolf</h3>
+A farmer asked his son to take their herd of sheep grazing every day.
+While the boy watched over the sheep, he got bored and decided to have some fun.
+So, he shouted, “Wolf! Wolf!”. Upon hearing this the villagers ran to help him chase the Wolf away.
+As they reached him, they realized that there was no Wolf and he was just kidding. The villagers were furious and they yelled at the boy for creating chaos and panic.
+On the next day and the boy shouted “Wolf!” again and once again the villagers came to help him and saw that there was no wolf. This made them very angry again.
+On the same day, the boy saw an actual Wolf that has terrorizing the sheep. The boy cried “Wolf! Wolf! please help me” and no villagers showed up as they believed that the boy was joking again.
+
+
+</div>
+
+<div style="z-index:3;" class="layer3style" id="layer3"
+onmouseover="mover('layer3','3')" onmouseout="moveBack()">
+
+<h3>The Golden Touch of Midas</h3>
+
+Once upon a time, there was a Greek King, Midas.
+He was very rich and had lots of Gold. He had a daughter, who he loved a lot.
+One day, Midas found an angel in need of help. He helped her and in return she agreed to grant a wish.
+Midas wished that everything he touched would turn into gold. His wish was granted
+On his way home, he touched rocks and plants and they turned into gold.
+As he reached home, in excitement he hugged his daughter, who turned into gold.
+Midas was devastated and he had learnt his lesson. Upon learning his lesson, Midas asked the angel to take his wish away.
+
+</div>
+</body>
+</html>
